@@ -4,6 +4,8 @@
   {{ model.question.body }}
 </p>
 
-{{answer-form question=model.question save="save"}}
+{{question-edit item=model.question save="saveEdit"}}
+
+{{answer-form question=model.question save="saveAnswer"}}
 
 {{answer-list question=model.question}}

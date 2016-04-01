@@ -1,0 +1,23 @@
+{{#if showEditForm}}
+  <h1>Edit Question</h1>
+  <form>
+    <div class="form-group">
+      <label for="author">Author</label>
+      {{input value=item.author id="author"}}
+    </div>
+
+    <div class="form-group">
+      <label for="question">Question</label>
+      {{input value=item.question id="question"}}
+    </div>
+
+    <div class="form-group">
+      <label for="body">Additional notes</label>
+      {{input value=item.body id="body"}}
+    </div>
+
+    <button {{action 'save' item}}>Save</button>
+  </form>
+{{else}}
+  <button {{action 'showEditForm'}}>Edit Question</button>
+{{/if}}

@@ -8,12 +8,19 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    save(params) {
+    saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
       var question = params.question;
       newAnswer.save().then(function() {
         return question.save();
       });
+    },
+    saveEdit(question, params) {
+      Object.keys(params).forEach(function(key) {
+        question.set(key,params[key]);
+      });
+      question.save();
+      this.transitionTo('question');
     }
   }
 });
