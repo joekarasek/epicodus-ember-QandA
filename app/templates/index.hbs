@@ -3,16 +3,9 @@ This is the index page!
 <button {{action 'addQuestion'}}>Add filler question to database.</button>
 
 <ul>
-  <li>This well be a list of questions</li>
-  <li>With authors, they will link to dynamic question routes</li>
-  <li>A component could be used well here.</li>
-</ul>
-
-<ul>
-  <li>Here is an actual list of questions from the database.</li>
   {{#each model as |question|}}
     <li>
-      {{ question.question }} by {{ question.author }}
+      {{question-tile question=question}}
     </li>
   {{/each}}
 </ul>
