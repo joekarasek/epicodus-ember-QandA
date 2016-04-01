@@ -2,10 +2,4 @@ This is the index page!
 
 <button {{action 'addQuestion'}}>Add filler question to database.</button>
 
-<ul>
-  {{#each model as |question|}}
-    <li>
-      {{question-tile question=question}}
-    </li>
-  {{/each}}
-</ul>
+{{question-list questions=model}}
