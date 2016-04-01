@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         var params = {
           author: this.get('author'),
           question: this.get('question'),
-          note: this.get('note') ? this.get('note') : ""
+          body: this.get('body') ? this.get('body') : ""
         };
         this.set('showQuestionForm', false);
         this.sendAction('save', params);
