@@ -11,10 +11,10 @@ export default Ember.Component.extend({
         var params = {
           author: this.get('author'),
           question: this.get('question'),
-          note: this.get('note'),
-        }
+          note: this.get('note') ? this.get('note') : ""
+        };
         this.set('showQuestionForm', false);
-        this.transitionTo('index');
+        this.sendAction('save', params);
       } else {
         alert('You must enter a question and author name to submit a new question.');
       }
