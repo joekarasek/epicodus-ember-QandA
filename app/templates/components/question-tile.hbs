@@ -1,5 +1,5 @@
 <li>
-  {{ question.question }} Make this a linkion
+  {{#link-to 'question' question.id }}{{ question.question }}{{/link-to}}
   <div class="">
     {{ question.author }}
   </div>
