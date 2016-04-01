@@ -6,6 +6,7 @@ A short introduction of this app could easily go here.
 
 # TODO:
 [ ] Add CSP
+[ ] Edit questions function
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
