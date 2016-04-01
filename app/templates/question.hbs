@@ -1,14 +1,9 @@
-<h2>{{ model.question }}</h2>
-<h3>Asked by: {{ model.author }}</h3>
+<h2>{{ model.question.question }}</h2>
+<h3>Asked by: {{ model.question.author }}</h3>
 <p>
-  {{ model.body }}
+  {{ model.question.body }}
 </p>
 
-{{answer-form question=model save="save"}}
+{{answer-form question=model.question save="save"}}
 
-<h3>Answers</h3>
-
-<ul>
-  <li>this will be a list</li>
-  <li>of the answers</li>
-</ul>
+{{answer-list question=model.question}}
