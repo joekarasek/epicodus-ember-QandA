@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-qand-a',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://emberQandA.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
