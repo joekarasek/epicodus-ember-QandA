@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  classNames: ['well'],
   showAnswerForm: false,
   actions: {
     showAnswerForm() {
       this.set('showAnswerForm', true);
+    },
+    hideAnswerForm() {
+      this.set('showAnswerForm', false);
     },
     save() {
       if(this.get('author') && this.get('body')) {

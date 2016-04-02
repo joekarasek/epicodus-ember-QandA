@@ -12,6 +12,7 @@
     </div>
 
     <button {{action 'save' question}} class="btn btn-primary">Save</button>
+    <button {{action 'hideAnswerForm'}} class="btn btn-warning">Cancel</button>
   </form>
 {{else}}
   <button {{action 'showAnswerForm'}} class="btn btn-primary">New Answer</button>
