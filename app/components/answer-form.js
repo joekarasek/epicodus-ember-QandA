@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     showAnswerForm() {
       this.set('showAnswerForm', true);
     },
-    save(question) {
+    save() {
       if(this.get('author') && this.get('body')) {
         var params = {
           author: this.get('author'),

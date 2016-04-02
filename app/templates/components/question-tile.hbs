@@ -1,6 +1,2 @@
-<li>
-  {{#link-to 'question' question.id }}{{ question.question }}{{/link-to}}
-  <div class="">
-    {{ question.author }}
-  </div>
-</li>
+{{#link-to 'question' question.id }}{{ question.question }}{{/link-to}} <br>
+By: {{ question.author }}
