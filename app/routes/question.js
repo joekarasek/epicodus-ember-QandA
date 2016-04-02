@@ -21,6 +21,19 @@ export default Ember.Route.extend({
       });
       question.save();
       this.transitionTo('question');
+    },
+    deleteQuestion(question) {
+      if(confirm('Are you sure you want to delete this question and all its answers? This cannot be undone...')) {
+        var answer_deletions = question.get('answers').map(function(answer) {
+          return answer.destroyRecord();
+        });
+        Ember.RSVP.all(answer_deletions).then(function() {
+          return question.destroyRecord();
+        });
+        this.transitionTo('index');
+      } else {
+        this.transitionTo('question');
+      }
     }
   }
 });

@@ -5,6 +5,7 @@
 </p>
 
 {{question-edit item=model.question save="saveEdit"}}
+<button {{action 'deleteQuestion' model.question}}>Delete Question</button>
 
 {{answer-form question=model.question save="saveAnswer"}}
 
