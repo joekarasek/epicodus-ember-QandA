@@ -1,12 +1,20 @@
-<h2>{{ model.question.question }}</h2>
-<h3>Asked by: {{ model.question.author }}</h3>
-<p>
-  {{ model.question.body }}
-</p>
+<!-- <div class="well">
+  <h2>{{ model.question.question }}</h2>
+  <h3>Asked by: {{ model.question.author }}</h3>
+  <p>
+    {{ model.question.body }}
+  </p>
+</div>
 
 {{question-edit item=model.question save="saveEdit"}}
-<button {{action 'deleteQuestion' model.question}}>Delete Question</button>
+<button {{action 'deleteQuestion' model.question}} class="btn btn-danger">Delete Question</button> -->
+
+{{question-verbose question=model.question save="saveEdit" delete="deleteQuestion"}}
+
+<hr>
 
 {{answer-form question=model.question save="saveAnswer"}}
+
+<hr>
 
 {{answer-list question=model.question}}

@@ -16,8 +16,8 @@
       {{input value=item.body id="body"}}
     </div>
 
-    <button {{action 'save' item}}>Save</button>
+    <button {{action 'save' item}} class="btn btn-primary">Save</button>
   </form>
 {{else}}
-  <button {{action 'showEditForm'}}>Edit Question</button>
+  <button {{action 'showEditForm'}} class="btn btn-primary">Edit Question</button>
 {{/if}}

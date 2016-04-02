@@ -1,0 +1,9 @@
+<div class="well">
+  <h2>{{ question.question }}</h2>
+  <h3>Asked by: {{ question.author }}</h3>
+  <p>
+    {{ question.body }}
+  </p>
+  {{question-edit item=question save="save"}}
+  <button {{action 'deleteQuestion' question}} class="btn btn-danger">Delete Question</button>
+</div>
