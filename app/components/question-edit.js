@@ -6,6 +6,9 @@ export default Ember.Component.extend({
     showEditForm() {
       this.set('showEditForm', true);
     },
+    hideEditForm() {
+      this.set('showEditForm', false);
+    },
     save(questionModel) {
       var params = {
         author: this.get('item.author'),
@@ -14,6 +17,9 @@ export default Ember.Component.extend({
       };
       this.set('showEditForm', false);
       this.sendAction('save', questionModel, params);
+    },
+    deleteQuestion(question) {
+      this.sendAction('deleteQuestion', question);
     }
   }
 });

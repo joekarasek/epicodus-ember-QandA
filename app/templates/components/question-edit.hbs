@@ -17,7 +17,9 @@
     </div>
 
     <button {{action 'save' item}} class="btn btn-primary">Save</button>
+    <button {{action 'hideEditForm'}} class="btn btn-warning">Cancel</button>
   </form>
 {{else}}
   <button {{action 'showEditForm'}} class="btn btn-primary">Edit Question</button>
+  <button {{action 'deleteQuestion' item}} class="btn btn-danger">Delete Question</button>
 {{/if}}
