@@ -18,6 +18,12 @@ _This code was put together for the week 3 code review for the Level 2 Javascrip
 * _Users should be able to click on a question to view additional information._
 * _Allow users to add and edit questions._
 * _Allow users to add answers to a question. Answers should be added and viewed on the same page as the question they respond to._
+* _Application template contains header with link(s)._
+* _Data is stored in and retrieved from Ember Data models and Firebase._
+* _Components are used to create display and behavior for your templates._
+* _One-to-many relationship exists between Question and Answers._
+* _Application works as expected._
+* _You are able to discuss the flow of your code and the concepts behind it with an instructor using correct terminology._
 
 ## Prerequisites
 
