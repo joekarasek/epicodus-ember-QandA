@@ -61,7 +61,7 @@ _You will need the following things properly installed on your computer._
 
 _No known bugs at this time._
 
-## Support and contact details
+## Support and contact detagils
 
 _If you have any questions, concerns, or feedback, please contact the authors through_ [gitHub](https://github.com/joekarasek/).
 
