@@ -42,7 +42,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/epicodus-ember-QandA/';
+    ENV.baseURL = '/epicodus-ember-QandA/dist';
   }
 
   return ENV;
