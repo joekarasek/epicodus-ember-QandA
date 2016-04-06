@@ -6,9 +6,12 @@
 }
 
 body {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/Shennongjia_virgin_forest.jpg);
+  background: url(https://upload.wikimedia.org/wikipedia/commons/1/16/Shennongjia_virgin_forest.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   font-family: monospace;
+  height: 100vh;
 }
 
 .well {
