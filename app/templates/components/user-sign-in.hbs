@@ -1,7 +1,8 @@
 <form class="well well-signIn">
   {{#if currentUser.name}}
-    <h1>Signed in as {{currentUser.currentUser}}</h1>
+    <h1>Signed in as {{currentUser.name}}</h1>
     <h3>Sign out to sign in as a different user.</h3>
+    <button {{action 'home'}} class="btn btn-primary">Home</button>
     <button {{action 'signOut'}} class="btn btn-warning">Sign Out</button>
   {{else}}
     <h1>User Sign In</h1>
@@ -9,6 +10,6 @@
       <label for="name">Name</label><br>
       {{input value=name id="name"}}
     </div>
-    <button {{action 'signIn'}} class="btn btn-primary">Create User</button>
+    <button {{action 'signIn'}} class="btn btn-primary">Sign In</button>
   {{/if}}
 </form>

@@ -5,6 +5,22 @@
         Ember Q and A
       </a>
     </div>
-    <h1><strong>{{currentUser.name}}</strong></h1>
+    <div class="navbar-links">
+      <ul>
+        <li>
+          About
+        </li>
+        <li>
+          Contact
+        </li>
+        <li>
+          {{#if currentUser.name}}
+            {{#link-to 'sign-in'}}Current User: <strong>{{currentUser.name}}</strong>{{/link-to}}
+          {{else}}
+            {{#link-to 'sign-in'}}<strong>Sign In</strong>{{/link-to}}
+          {{/if}}
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
