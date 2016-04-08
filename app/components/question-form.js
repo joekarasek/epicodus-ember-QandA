@@ -15,8 +15,10 @@ export default Ember.Component.extend({
         var params = {
           author: this.get('currentUser').getName(),
           question: this.get('question'),
-          body: this.get('body') ? this.get('body') : ""
+          body: this.get('body') ? this.get('body') : "",
+          date: Date.now()
         };
+        console.log(params);
         this.set('showQuestionForm', false);
         this.sendAction('save', params);
       } else {
