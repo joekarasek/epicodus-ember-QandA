@@ -1,12 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  currentUser: null,
+  name: null,
 
   signIn(name) {
-    this.set('currentUser', name);
+    this.set('name', name);
   },
   signOut() {
-    this.set('currentUser', null);
+    this.set('name', null);
+  },
+  getName() {
+    return this.get('name');
   }
 });

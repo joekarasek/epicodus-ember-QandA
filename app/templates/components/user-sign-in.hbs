@@ -1,5 +1,5 @@
 <form class="well well-signIn">
-  {{#if currentUser.currentUser}}
+  {{#if currentUser.name}}
     <h1>Signed in as {{currentUser.currentUser}}</h1>
     <h3>Sign out to sign in as a different user.</h3>
     <button {{action 'signOut'}} class="btn btn-warning">Sign Out</button>
