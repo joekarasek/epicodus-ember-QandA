@@ -15,7 +15,7 @@
         </li>
         <li>
           {{#if currentUser.name}}
-            {{#link-to 'sign-in'}}Current User: <strong>{{currentUser.name}}</strong>{{/link-to}}
+            {{#link-to 'sign-in'}}<strong>{{currentUser.name}}</strong>: Sign out{{/link-to}}
           {{else}}
             {{#link-to 'sign-in'}}<strong>Sign In</strong>{{/link-to}}
           {{/if}}

@@ -18,7 +18,6 @@ export default Ember.Component.extend({
           body: this.get('body') ? this.get('body') : "",
           date: Date.now()
         };
-        console.log(params);
         this.set('showQuestionForm', false);
         this.sendAction('save', params);
       } else {
