@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  currentUser: Ember.inject.service('current-user'),
   showQuestionForm: false,
   actions: {
     showQuestionForm() {
@@ -10,16 +11,16 @@ export default Ember.Component.extend({
       this.set('showQuestionForm', false);
     },
     save() {
-      if(this.get('author') && this.get('question')) {
+      if(this.get('question')) {
         var params = {
-          author: this.get('author'),
+          author: this.get('currentUser').getName(),
           question: this.get('question'),
           body: this.get('body') ? this.get('body') : ""
         };
         this.set('showQuestionForm', false);
         this.sendAction('save', params);
       } else {
-        alert('You must enter a question and author name to submit a new question.');
+        alert('You must enter a question to submit.');
       }
     }
   }
