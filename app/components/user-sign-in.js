@@ -6,6 +6,9 @@ export default Ember.Component.extend({
   actions: {
     signIn() {
       this.get('currentUser').signIn(this.get('name'));
+    },
+    signOut() {
+      this.get('currentUser').signOut();
     }
   }
 });
