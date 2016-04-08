@@ -1,14 +1,14 @@
-<form class="well">
+<form class="well well-signIn">
   {{#if currentUser.currentUser}}
-  <h1>Signed in as {{currentUser.currentUser}}</h1>
-  <h3>Sign out to sign in as a different user.</h3>
-  <button {{action 'signOut'}} class="btn btn-warning">Sign Out</button>
+    <h1>Signed in as {{currentUser.currentUser}}</h1>
+    <h3>Sign out to sign in as a different user.</h3>
+    <button {{action 'signOut'}} class="btn btn-warning">Sign Out</button>
   {{else}}
-  <h1>User Sign In</h1>
-  <div class="form-group">
-    <label for="name">Name</label><br>
-    {{input value=name id="name"}}
-  </div>
-  <button {{action 'signIn'}} class="btn btn-primary">Create User</button>
+    <h1>User Sign In</h1>
+    <div class="form-group">
+      <label for="name">Name</label><br>
+      {{input value=name id="name"}}
+    </div>
+    <button {{action 'signIn'}} class="btn btn-primary">Create User</button>
   {{/if}}
 </form>

@@ -18,6 +18,10 @@ body {
   background-color: hsla(0, 3%, 88%, 0.88);
 }
 
+.well-signIn {
+  text-align: center;
+}
+
 .btn {
   color: hsla(0, 3%, 88%, 0.88);
   background-color: green:
