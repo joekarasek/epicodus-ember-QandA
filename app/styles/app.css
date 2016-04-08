@@ -28,11 +28,11 @@ body {
 }
 
 a {
-  color: green;
+  color: black;
 }
 
 a:hover {
-  color: green;
+  color: white;
 }
 
 .question-header {
@@ -67,6 +67,10 @@ a:hover {
 }
 .navbar-links a {
   color: white;
+}
+
+.home-splash {
+  text-align: center;
 }
 
 .container-fluid {
