@@ -1,19 +1,24 @@
-{{#if showAnswerForm}}
-  <h1>New Answer</h1>
-  <form>
-    <div class="form-group">
-      <label for="author">Author</label>
-      {{input value=author id="author"}}
-    </div>
+<div class="answer-form">
+  {{#if showAnswerForm}}
+    <div class="well">
+      <h1>New Answer</h1>
+      <form>
+        <div class="form-group">
+          <label for="author">Author</label>
+          {{input value=author id="author"}}
+        </div>
 
-    <div class="form-group">
-      <label for="body">Answer</label>
-      {{input value=body id="body"}}
-    </div>
+        <div class="form-group">
+          <label for="body">Answer</label>
+          {{input value=body id="body"}}
+        </div>
 
-    <button {{action 'save' question}} class="btn btn-primary">Save</button>
-    <button {{action 'hideAnswerForm'}} class="btn btn-warning">Cancel</button>
-  </form>
-{{else}}
-  <button {{action 'showAnswerForm'}} class="btn btn-primary">New Answer</button>
-{{/if}}
+        <button {{action 'save' question}} class="btn btn-primary">Save</button>
+        <button {{action 'hideAnswerForm'}} class="btn btn-warning">Cancel</button>
+      </form>
+    </div>
+  {{else}}
+    <button {{action 'showAnswerForm'}} class="btn btn-primary">New Answer</button><br><br>
+  {{/if}}
+
+</div>
