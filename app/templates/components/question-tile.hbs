@@ -1,5 +1,6 @@
-<div class="question-header">
+<div class="question-main">
   {{#link-to 'question' question.id }}{{ question.question }}{{/link-to}}
 </div>
-By: {{ question.author }}
-Created: {{time-since question}}
+<div class="question-meta">
+  <strong>By: {{ question.author }}</strong>   Created: {{time-since question}}
+</div>

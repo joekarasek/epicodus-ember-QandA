@@ -35,11 +35,14 @@ a:hover {
   color: white;
 }
 
-.question-header {
+.question-main {
   font-size: 23px;
   font-weight: bold;
-  text-align: center;
-  color: white;
+  float: left;
+}
+
+.question-meta {
+  text-align: right;
 }
 
 .navbar {
