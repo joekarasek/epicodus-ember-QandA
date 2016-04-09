@@ -2,5 +2,5 @@
   {{#link-to 'question' question.id }}{{ question.question }}{{/link-to}}
 </div>
 <div class="question-meta">
-  <strong>By: {{ question.author }}</strong>   Created: {{time-since question}}
+  By: <strong>{{ question.author }}</strong>  Created: <strong>{{time-since question}}</strong>  Answers: <strong>{{num-answers question}}</strong>
 </div>
