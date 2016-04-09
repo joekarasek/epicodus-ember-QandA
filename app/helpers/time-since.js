@@ -7,13 +7,13 @@ export function timeSince(params) {
 
   if( elapsedTime < 3600000) {
     var minutes = Math.floor(elapsedTime/60000);
-    return minutes.toString() + " m";
+    return minutes.toString() + " m ago";
   } else if (elapsedTime < 172800000) {
     var hours = Math.floor(elapsedTime/3600000);
-    return hours.toString() + " hr";
+    return hours.toString() + " hr ago";
   } else {
     var days = Math.floor(elapsedTime/172800000);
-    return hours.toString() + " days";
+    return hours.toString() + " days ago";
   }
 }
 

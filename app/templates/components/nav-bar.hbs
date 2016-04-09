@@ -1,17 +1,12 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        Wisdom of the Woods
-      </a>
+      {{#link-to 'index'}}<div class="navbar-brand">Wisdom of the Woods</div>{{/link-to}}
     </div>
     <div class="navbar-links">
       <ul>
         <li>
-          About
-        </li>
-        <li>
-          Contact
+          {{#link-to 'about'}}<strong>About</strong>{{/link-to}}
         </li>
         <li>
           {{#if currentUser.name}}
