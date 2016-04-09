@@ -1,24 +1,28 @@
 <div class="answer-form">
   {{#if showAnswerForm}}
-    <div class="well">
-      <h1>New Answer</h1>
-      <form>
-        <div class="form-group">
-          <label for="author">Author</label>
-          {{input value=author id="author"}}
+    {{#if currentUser.name}}
+      <div class="well">
+        <h1>New Answer</h1>
+        <form>
+          <div class="form-group">
+            <label for="author">Author: {{currentUser.name}}</label><br>
+          </div>
+          <div class="form-group">
+            <label for="body">Answer: </label>
+            {{textarea value=body id="body" cols="40" rows="4"}}
+          </div>
+          <button {{action 'save' question}} class="btn btn-primary">Save</button>
+          <button {{action 'hideAnswerForm'}} class="btn btn-warning">Cancel</button>
+        </form>
+      </div>
+    {{else}}
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          {{user-sign-in}}
         </div>
-
-        <div class="form-group">
-          <label for="body">Answer</label>
-          {{input value=body id="body"}}
-        </div>
-
-        <button {{action 'save' question}} class="btn btn-primary">Save</button>
-        <button {{action 'hideAnswerForm'}} class="btn btn-warning">Cancel</button>
-      </form>
-    </div>
+      </div>
+    {{/if}}
   {{else}}
     <button {{action 'showAnswerForm'}} class="btn btn-primary">New Answer</button><br><br>
   {{/if}}
-
 </div>
