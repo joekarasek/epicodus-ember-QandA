@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'ul',
-  classNames: ['question-list']
+  classNames: ['question-list'],
+
+  sortBy: ['author:asc'],
+  sortedQuestions: Ember.computed.sort('questions', 'sortBy')
 });

@@ -1,1 +1,6 @@
-{{ answer.body }} by <strong>{{ answer.author }}</strong>
+<div class="question-main">
+  <strong>{{ answer.body}}</strong>
+</div>
+<div class="question-meta">
+  <strong>By: {{ answer.author }}</strong>   Created: {{time-since answer}}
+</div>

@@ -1,5 +1,7 @@
 # Ember Q and A
 
+[Demo Site](http://joekarasek.github.io/epicodus-ember-QandA/)
+
 ## _**By Joseph Karasek**_
 
 ## Description
@@ -56,6 +58,12 @@ _You will need the following things properly installed on your computer._
 
 * `ember build` (development)
 * `ember build --environment production` (production)
+
+### Deploy
+
+To deploy to GitHub Pages, run:
+
+    bash scripts/deploy-to-github-pages.sh
 
 ## Known Bugs
 

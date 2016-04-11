@@ -18,30 +18,68 @@ body {
   background-color: hsla(0, 3%, 88%, 0.88);
 }
 
+.well-signIn {
+  text-align: center;
+}
+
 .btn {
   color: hsla(0, 3%, 88%, 0.88);
   background-color: green:
 }
 
 a {
-  color: green;
+  color: black;
 }
 
 a:hover {
-  color: green;
+  color: white;
 }
 
-.question-header {
+.question-main {
   font-size: 23px;
   font-weight: bold;
+  float: left;
+}
+
+.question-meta {
+  text-align: right;
 }
 
 .navbar {
-  background-color: rgba(13, 74, 13, 0.81);
-
+  background-color: rgba(13, 74, 13, 0.90);
 }
 
 .navbar-header {
   text-align: center;
   font-size: 24px;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar-links {
+  display: inline-block;
+  float: right;
+}
+.navbar-links li {
+  color: white;
+  display: inline-block;
+  margin-left: 25px;
+  margin-top: 15px;
+}
+.navbar-links a {
+  color: white;
+}
+
+.home-splash {
+  text-align: center;
+}
+
+.container-fluid {
+  text-align: center;
+}
+
+.answer-form {
+  text-align: center;
 }

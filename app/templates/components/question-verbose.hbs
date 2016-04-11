@@ -1,6 +1,6 @@
-<h2>{{ question.question }}</h2>
-<h3>Asked by: {{ question.author }}</h3>
+<h2><strong>Question:</strong> {{ question.question }}</h2>
+<h3><strong>Asked by:</strong> {{ question.author }}</h3>
 <p>
-  {{ question.body }}
+  Notes: {{ question.body }}
 </p>
 {{question-edit item=question save="save" deleteQuestion="deleteQuestion"}}

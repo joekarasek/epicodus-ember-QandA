@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['well'],
+  currentUser: Ember.inject.service('current-user'),
   showAnswerForm: false,
   actions: {
     showAnswerForm() {
@@ -11,11 +11,12 @@ export default Ember.Component.extend({
       this.set('showAnswerForm', false);
     },
     save() {
-      if(this.get('author') && this.get('body')) {
+      if(this.get('body')) {
         var params = {
-          author: this.get('author'),
+          author: this.get('currentUser').name,
           body: this.get('body'),
-          question: this.get('question')
+          question: this.get('question'),
+          date: Date.now()
         };
         this.set('showAnswerForm', false);
         this.sendAction('save', params);
